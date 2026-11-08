@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 700px; margin: 2rem auto; padding: 0 1rem; }
+    form { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.5rem; padding: 1rem; border: 1px solid #ccc; border-radius: 6px; }
+    input, button { padding: 0.5rem; font-size: 1rem; }
+    .task-item { border: 1px solid #ddd; padding: 0.75rem; margin-bottom: 0.5rem; border-radius: 6px; }
+    .task-title { font-weight: bold; font-size: 1.1rem; }
+    .task-description { color: #555; margin: 0.25rem 0; }
+    .task-status { font-size: 0.9rem; margin-bottom: 0.5rem; }
+    .task-actions button { margin-right: 0.5rem; cursor: pointer; }
+    #status-message { color: #b00020; font-weight: bold; margin-bottom: 1rem; min-height: 1.2rem; }
+  </style>
+</head>
+<body>
+  <h1>Task Manager</h1>
+  <p>Student ID: <span id="student-id">70643</span></p>
+  <p><a id="contribution-link" href="contribution.html">View Team Contribution</a></p>
+
+  <div id="status-message"></div>
+
+  <form id="task-form">
+    <input type="text" id="task-title" placeholder="Task title" required />
+    <input type="text" id="task-description" placeholder="Task description (optional)" />
+    <button type="submit" id="task-submit">Save Task</button>
+  </form>
+
+  <div id="task-list"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
